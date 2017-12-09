@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+        // window.onload=function(){
+        //     var tab=document.getElementByClassName('tab');
+        //     setInterval(function(){
+        //         for(var i=0;i++;i<5){
+                    
+        //         }
+        //     })
+        // }
+
+        //自定义动画解决
+        $(function(){
+            $('.lis3').on('mouseenter',function(){
+                $('.serch').fadeIn();
+            });
+            $('.lis3').on('mouseleave',function(){
+                $('.serch').hide();
+            })
+            $('.lis4').on('mouseenter',function(){
+                $('.webSurport').slideDown();
+            });
+            $('.lis4').on('mouseleave',function(){
+                $('.webSurport').hide();
+            })
+            $('.lis5').on('mouseenter',function(){
+                $('.interaction').slideDown();
+            });
+            $('.lis5').on('mouseleave',function(){
+                $('.interaction').hide();
+            })
+            $('.lis7').on('mouseenter',function(){
+                $('.cooperation').slideDown();
+            });
+            $('.lis7').on('mouseleave',function(){
+                $('.cooperation').hide();
+            })
+            $('.lis8').on('mouseenter',function(){
+                $('.userCenter').slideDown();
+            });
+            $('.lis8').on('mouseleave',function(){
+                $('.userCenter').hide();
+            })
+            
+           
+        })
+    </script>
+</head>
+<body>
+    <div id="top">
+        <div class="tab">
+            <ul class="tab_pic">
+                <li class="curent"><img src="img/tab1.png" alt=""></li>
+                <li><img src="img/tab2.png" alt=""></li>
+                <li><img src="img/tab3.png" alt=""></li>
+                <li><img src="img/tab4.png" alt=""></li>
+                <li><img src="img/tab5.png" alt=""></li>
+                <li><img src="img/tab6.png" alt=""></li>
+            </ul>
+        </div>
+        <div class="nav">
+            <ul class="tittles">
+                <!-- <li>搜索资源平台</li>
+                <li>首页</li>
+                <li>搜索学院</li>
+                <li>网站支持</li>
+                <li>互动交流</li>
+                <li>资源合作</li>
+                <li>熊掌号</li>
+                <li>用户中心</li> -->
+                
+                <li class="tubiao">
+                        <a href="#javascript:;"><img src="http://ziyuan.baidu.com/static/ziyuan/image/common/logo_bbb4ad1.png" alt="" width="203px" height="27px"></a>
+                </li>
+                <li><a href="#javascript:;">首页</a></li>
+                <li class="lis3"> <a href="#javascript:;">搜索学院</a></li>
+                <li class="lis4"><a href="#javascript:;">网站支持</a></li>
+                <li class="lis5"><a href="#javascript:;">互动交流</a></li>
+                <li class="lis6"><a href="#javascript:;">资源合作</a></li>
+                <li class="lis7">
+                    <div class="xiongzhanghao"></div>
+                    <a href="#javascript:;">熊掌号</a>
+                </li>
+                <li class="lis8"><a href="#javascript:;">用户中心</a></li>
+            </ul>
+            <ul class="user">
+                <li class="name"><a href="#javascript:;"></a>风吹动了情</li>
+                <li><a href="#javascript:;"></a>退出</li>
+            </ul>
+        </div>
+       
+        <div class="serch topic1" >
+                <!-- <ul class="ssxy_lis">
+                        <li>热门内容</li>
+                        <li>工具解读</li>
+                        <li>建站优化</li>
+                        <li>搜索规范</li>
+                        <li>熊掌号</li>
+                        <li>Web技术</li>
+                    </ul> -->
+        
+            <div class="serch_1 sameA">
+                <a href="#javascript:;">热门内容</a>
+                <a href="#javascript:;">工具解读</a>
+                <a href="#javascript:;">建站优化</a>
+                <a href="#javascript:;">搜索规范</a>
+                <a href="#javascript:;">熊掌号</a>
+                <a href="#javascript:;">Web技术</a>
+            </div>
+        </div>
+        
+        <div class="webSurport">
+            <div class="left" class="web_tittles">
+                <p>数据引入</p>
+                <div class="tittles_a">
+                    <a href="">链接提交</a>
+                    <a href="">原创保护</a>
+                    <a href="">移动适配</a>
+                    <a href="">MIp&AMP</a>
+                    <a href="">死链提交</a>
+                </div>
+                <p>搜索展现</p>
+                <div class="tittles_a">
+                    <a href="">HTPS认证</a>
+                    <a href="">站点属性</a>
+                    <a href="">站点子链</a>
+                    <a href="">官网保护</a>
+                </div>
+            </div>
+            <div class="right" class="web_tittles">
+                    <p>数据引入</p>
+                    <div class="tittles_a">
+                        <a href="">链接提交</a>
+                        <a href="">原创保护</a>
+                        <a href="">移动适配</a>
+                        <a href="">MIp&AMP</a>
+                        <a href="">死链提交</a>
+                    </div>
+                    <p>搜索展现</p>
+                    <div  class="tittles_a">
+                        <a href="">HTPS认证</a>
+                        <a href="">站点属性</a>
+                        <a href="">站点子链</a>
+                        <a href="">官网保护</a>
+                    </div>
+            </div>
+        </div>
+        <div class="interaction topic2" >
+            <div class="interaction_1 sameA">
+                <a href="">热门活动</a>
+                <a href="">论坛</a>
+                <a href="">反馈中心</a>
+                <a href="">VIP俱乐部</a>
+            </div>
+        </div>
+        <div class="cooperation topic3">
+            <div class="cooperation_1 sameA">
+                <a href="">合作专题</a>
+                <a href="">申请历史</a>
+            </div>
+        </div>
+        <div class="userCenter topic4">
+            <div class="userCenter_1 sameA">
+                <a href="">站点管理</a>
+                <a href="">消息提醒</a>
+                <a href="">联系方式</a>
+                <a href="">管理员设置</a>
+                <a href="">消息订阅</a>
+            </div>
+        </div>
+    </div>
+    <div id="content"></div>
+    <div id="bottom"></div>
+    
+</body>
+</html>

@@ -1,0 +1,4 @@
+4.url模块：
+	1）req.url属性：req.js
+	2)url模块：url的api:url.parse() --url.js
+5.

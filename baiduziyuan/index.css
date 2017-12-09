@@ -1,0 +1,211 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+body{
+    width: 100%;
+    overflow: hidden;
+    font-size: 14px;
+    font: normal 14px tahoma, PingFangSC, "microsoft yahei ui", "microsoft yahei", sans-serif;
+}
+a{
+    color: #666666;
+    text-decoration: none;
+}
+#top{
+    width: 100%;
+    height:525px;
+    position: relative;
+}
+.tab .tab_pic{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.tab .tab_pic li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: -1;
+}
+.tab .tab_pic li.curent{
+    display: block;
+}
+/* nav样式 */
+.nav{
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+    z-index: 100;
+    font-family: tahoma, PingFangSC, "microsoft yahei ui", "microsoft yahei", sans-serif;
+
+}
+.nav:hover{
+    background: black;
+}
+.nav .tittles{
+   height: 60px;
+    padding-left:82px;
+    float: left;
+}
+.nav .tittles li{   
+    float: left;
+    margin-right: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 16px;
+    position: relative;
+}
+
+.nav .tittles li.tubiao{
+    position: relative;
+    top: -12px;
+} 
+
+.nav .tittles li a{
+    display: block;
+    height: 30px;
+    padding-top:27px; 
+    color: #666666;
+    text-decoration: none;
+}
+.nav .tittles li a:hover{
+    border-bottom:3PX solid #ffffff; 
+    color: #ffffff;
+}
+.nav .tittles li.tubiao a:hover{
+    border-bottom: 0;
+}
+.nav .tittles li .xiongzhanghao{
+    width: 6px;
+    height: 6px;
+    background:#f95d5d;
+    border-radius: 6px;
+    position: absolute;
+    top: -7px;
+    right: -2px;
+}
+
+.nav .user{
+    margin:27px 0; 
+    padding-right: 76px;
+    float: left;
+    z-index: 110;
+}
+.nav .user li{
+    float: left;
+    padding: 0 16px;
+    cursor: pointer;
+    color: #666666;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 14px;
+}
+/* .nav .user li a{
+    color: #666666;
+} */
+.nav .user li:hover{
+    color: #ffffff;
+}
+.nav .user li.name{
+    border-right:1px solid #666666; 
+}
+/* 二级内容 */
+/* 1 */
+.topic1{
+    width: 100%;
+    height: 60px;
+    background: #000000;
+    opacity: 0.9;
+    display: none;
+}
+
+ .serch_1{
+     width: 40%;
+     margin:0 auto; 
+}
+.sameA a{
+    display:inline-block;
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 15px;
+}
+/* 用js添加 */
+.sameA a:hover{ 
+   background: #272727;
+}
+/* 2 */
+.webSurport{
+    font-size: 14px;
+    width: 100%;
+    height: 211px;
+    background: #000000;
+    opacity: 0.9;
+    display: none;
+}  
+.webSurport .left{
+    float: left;
+    margin: 0 118px;
+    padding-top: 15px;
+}
+.webSurport .right{
+    float: right;
+    margin-right:200px;
+    padding-top: 15px;
+}
+.webSurport p{
+    width: 455px;
+    color: #ffffff;
+}
+.tittles_a{
+    margin-left:-10px; 
+}
+.tittles_a a{
+    display:inline-block;
+    margin:15px 14px 15px 0;
+    /* margin-top: 20px; */
+    padding: 10px; 
+    position: relative;
+}
+.tittles_a a:hover{
+    background: #272727;  
+}
+/* 2 */
+.topic2{
+    width: 100%;
+    height: 60px;
+    background: #000000;
+    opacity: 0.9;
+    display: none;
+}
+.interaction_1{
+    width: 27%;
+    margin: 0 auto;
+}
+/* 4 */
+.topic3{
+    width:100%;
+    height: 60px;
+    background: #000000;
+    opacity: 0.9;
+    display: none;
+}
+.cooperation_1{
+    width:14%;
+    margin: 0 auto;
+}
+/* 5 */
+.topic4{
+    width:100%;
+    height: 60px;
+    background: #000000;
+    opacity: 0.9;
+    display: none;
+}
+.userCenter_1{
+    width:35.5%;
+    margin: 0 auto;
+}
