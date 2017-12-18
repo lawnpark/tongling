@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>江门航信抽奖系统</title>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slotmachine.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body,html{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        #choujiang{
+            width: 100%;
+            height: 100%;
+            background: url(img/choujiang.png);
+            background-size: 100% 100%;
+            overflow: hidden;
+        }
+        h2{
+            text-align: center;
+            font-size: 42px;
+            line-height: 100px;
+            height: 100px;
+            color: #d2e007;
+        }
+        #ch{
+            width: 960px;
+            height: 500px;
+            margin: 0 auto;
+            background:#fcfcfc;
+            position: relative;
+        }
+        #left{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 480px;
+            height: 500px;
+            overflow: hidden;
+            border-right: 2px solid #333;
+        }
+        #right{
+            position: absolute;
+            top: 0;
+            left: 480px;
+            width: 480px;
+            height: 500px;
+        }
+        h3{
+            text-align: center;
+            font-size: 30px;
+            line-height: 80px;
+            height: 80px;
+            color:red;
+        }
+        h4{
+            position: absolute;
+            font-size: 20px;
+            color: #e91010;
+        }
+        .hh01{
+            top: 125px;
+            left: 60px;
+        }
+        .hh02{
+            top: 280px;
+            left: 60px;
+        }
+        .hh03{
+            top: 425px;
+            left: 60px;
+        }
+        .ul01{
+            width: 255px;
+            height: 85px;
+            margin: 17px 80px 0 155px;
+        }
+        .ul001{
+            height: 175px;
+            margin-top: 25px;
+        }
+        .ul01 li{
+            float: left;
+            width: 80px;
+            height: 80px;
+            margin:0 5px 5px 0;
+            list-style: none;
+        }
+        .ul01 li img,#bigpic img{
+            width: 100%;
+            height: 100%;
+        }
+        #bigpic{
+            position: absolute;
+            top: 90px;
+            left: 90px;
+            width: 300px;
+            height: 300px;
+            z-index: 100;
+            display: none;
+        }
+        #mask{
+            position: absolute;
+            top: 0;
+            left: 0; 
+            width: 100%;
+            height: 100%;
+            z-index: 99;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+        }
+        #gundong{
+            width: 400px;
+            height: 230px;
+            margin: 0 auto;
+        }
+        .btn{
+            position: absolute;
+            width: 170px;
+            height: 70px;
+            font-size: 40px;
+            text-align: center;
+            border-radius: 10px;
+            line-height: 70px;
+            background: rgb(29, 161, 29);
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background: rgb(2, 68, 2);
+            color: #ffffff;
+        }
+        #start{
+            top: 360px;
+            left: 40px;
+        }
+        #end{
+            top: 360px;
+            left: 265px;
+        }
+        .slot{cursor: pointer;} 
+        
+        .slotMachine {
+            width: 400px;
+            height: 230px; 
+            overflow: hidden;
+            display: inline-block; 
+            text-align: center; 
+        }
+        .machine4{
+            width:400px;
+            height:230px;
+            float:left;
+            margin-right:6px;
+        }
+    </style>
+</head>
+<body>
+    <div id="choujiang">
+        <h2>幸运大抽奖</h2>
+        <div id="ch">
+            <div id="left">
+                <div id="mask"></div>
+                <div id="bigpic">
+                    <img src="img/anmoyi.png">
+                </div>
+                <h3>奖品区</h3>
+                <h4 class="hh01">一等奖</h4>
+                <ul class="ul01">
+                    <li><img src="img/anmoyi.png"></li>
+                    <li><img src="img/xinglixiang.png"></li>
+                    <li><img src="img/zuyupen.png"></li>
+                </ul>
+                <h4 class="hh02">二等奖</h4>
+                <ul class="ul01 ul001">
+                    <li><img src="img/xichenqi.png"></li>
+                    <li><img src="img/guatanji.png"></li>
+                    <li><img src="img/sijiantao.jpg"></li>
+                    <li><img src="img/tixudao.png"></li>
+                    <li><img src="img/yangshenghu.png"></li>
+                    <li><img src="img/zhazhiji.png"></li>
+                </ul>
+                <h4 class="hh03">三等奖</h4>
+                <ul class="ul01">
+                    <li><img src="img/baowenbei.png"></li>
+                    <li><img src="img/chongdianbao.png"></li>
+                    <li><img src="img/ganyiji.png"></li>
+                </ul>
+            </div>
+            <div id="right">    
+                <h3>抽奖区</h3>
+                <div id="gundong">
+                    <div id="machine4" class="slotMachine"></div>
+                </div>
+                <span class="btn slotMachineButtonShuffle" id="start">开始</span>
+                <span class="btn slotMachineButtonStop" id="end">结束</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('li').click(function(){
+            $('#bigpic,#mask').show();
+            $('#bigpic img').attr('src',$(this).find('img').attr('src'));
+        })
+        $('#mask').click(function(){
+            $('#bigpic,#mask').hide();
+        })
+        var html = "";
+	for(i=1;i<49;i++){
+		html += "<div class='slot slot"+i+"'><img src='img/"+i+".jpg'/></div>";
+	}
+	$("#machine4").html(html);
+	var machine4 = $("#machine4").slotMachine({
+		active	: 0,
+		delay	: 1000
+	});
+
+	$(".slotMachineButtonShuffle").click(function(){
+		machine4.shuffle();
+	});
+	
+	$(".slotMachineButtonStop").click(function(){
+		if(machine4.isRunning()){
+			console.log(machine4.stop(true));
+		} 
+	});
+	$(".slot").click(function(){
+		$(this).remove();
+	});
+    </script>
+</body>
+</html>
