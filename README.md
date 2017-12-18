@@ -24,3 +24,4 @@
 （删除、显示、隐藏、置顶、加精等）、博文的统计分析（对博文进行归类分析，得出数据）。
 
 ### 5、技术栈
+HTML + CSS + Vue + jQuery + webpack + nodejs + mongodb + koa2
